@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Дмитрий Давыдов](https://up.htmlacademy.ru/adaptive/15/user/553271).
-* Наставник: [Степан Нарышков](https://htmlacademy.ru/profile/id95962).
+* Наставник: [Степан Нарышков](https://up.htmlacademy.ru/adaptive/15/user/95962).
 
 ---
 

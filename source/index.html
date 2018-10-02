@@ -1,12 +1,113 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
-
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+</head>
+<body>
+<header class="page-header">
+  <a class="page-header__logo">
+    <img src="http://placehold.it/102x83" alt="Sedona City Logo" class="page-header__logo-image">
+  </a>
+  <nav class="main-nav">
+    <button class="main-nav__toggle">Открыть меню</button>
+    <ul class="main-nav__list">
+      <li><a class="main-nav__list-item main-nav__list-item--active">Главная</a></li>
+      <li><a href="photo.html" class="main-nav__list-item">Фото и видео</a></li>
+      <li><a href="form.html" class="main-nav__list-item">Форма отзыва</a></li>
+      <li><a href="#" class="main-nav__list-item">HTML Academy</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="page-main">
+  <section class="welcome">
+    <h2 class="visually-hidden">Welcome to the gorgeous Sedona</h2>
+  </section>
+  <section class="intro">
+    <div class="intro__wrapper">
+      <h2 class="intro__title">Седона — небольшой городок в аризоне, заслуживающий большего!</h2>
+      <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+    </div>
+  </section>
+  <section class="true-city">
+    <div class="true-city__wrapper feature feature--special">
+      <h3 class="feature__title">Настоящий городок</h3>
+      <div class="feature__number">— №1 —</div>
+      <p class="feature__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+    </div>
+  </section>
+  <section class="true-city-photo"></section>
+  <section class="true-city-photo"></section>
+  <section class="city-features">
+    <div class="city-features__wrapper">
+      <ul class="city-features__list">
+        <li class="city-features__item city-features__item--accommodation">
+          <h3 class="city-features__title">Жилье</h3>
+          <p class="city-features__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </li>
+        <li class="city-features__item city-features__item--souvenir">
+          <h3 class="city-features__title">Сувениры</h3>
+          <p class="city-features__text">Не только китайского, но и местного производства!</p>
+        </li>
+        <li class="city-features__item city-features__item--food">
+          <h3 class="city-features__title">ЕДА</h3>
+          <p class="city-features__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="devil-bridge">
+    <div class="devil-bridge__wrapper feature feature--special">
+      <h3 class="feature__title">Там есть мост дьявола</h3>
+      <div class="feature__number">— №2 —</div>
+      <p class="feature__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+    </div>
+  </section>
+  <section class="devil-bridge-photo"></section>
+  <section class="other-features">
+    <div class="other-features__wrapper">
+      <ul class="other-features__list">
+        <li class="other-features__item feature">
+          <h3 class="feature__title">Небольшая площадь</h3>
+          <div class="feature__number">— №3 —</div>
+          <p class="feature__text">Все интересные места находятся очень близко</p>
+        </li>
+        <li class="other-features__item feature">
+          <h3 class="feature__title">КРАСИВАЯ ДОРОГА</h3>
+          <div class="feature__number">— №4 —</div>
+          <p class="feature__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="interested">
+    <div class="interested__wrapper">
+      <h3 class="interested__title">Заинтересовались?</h3>
+      <p class="interested__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
+        Седоне</p>
+    </div>
+    <a href="#" class="interested__find-hotel button">Найти гостиницу</a>
+  </section>
+  <section class="location"></section>
+</main>
+<footer class="page-footer">
+  <div class="page-footer__social social">
+    <div class="social__hash-tag">#VISITSEDONA</div>
+    <ul class="social__list">
+      <li class="social__item">
+        <a href="https://twitter.com" class="social__link social__link--twitter">Мы в Twitter</a>
+      </li>
+      <li class="social__item">
+        <a href="https://facebook.com" class="social__link social__link--facebook">Мы в Facebook</a>
+      </li>
+      <li class="social__item">
+        <a href="https://youtube.com" class="social__link social__link--youtube">Мы в Youtube</a>
+      </li>
+    </ul>
+  </div>
+  <div class="page-footer__copyright copyright">
+    Разработано <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
+  </div>
+</footer>
+</body>
 </html>

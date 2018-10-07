@@ -1,0 +1,27 @@
+@import "mixins";
+@import "typography";
+
+.footer {
+  padding: 31px 0 18px;
+}
+
+.footer__hash-tag {
+  .title();
+  .title--large();
+  margin-bottom: 36px;
+}
+
+.footer__social-list {
+  .list();
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.footer__social-item {
+  margin-right: 6px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

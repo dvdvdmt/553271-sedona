@@ -1,0 +1,47 @@
+@import "mixins";
+@import "typography";
+
+.city-features {
+  .list();
+}
+
+.city-features__item {
+  padding-top: 14px;
+  padding-left: 52px;
+  margin-bottom: 14px;
+  background-repeat: no-repeat;
+
+  &--accommodation {
+    background-image: url("/img/icon-house.svg");
+    background-size: 37px 36px;
+    background-position: 4px 5px;
+  }
+
+  &--souvenir {
+    background-image: url("/img/icon-gift.svg");
+    background-size: 32px 38px;
+    background-position: 7px 3px;
+  }
+
+  &--food {
+    background-image: url("/img/icon-burger.svg");
+    background-size: 40px 35px;
+    background-position: 0 9px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.city-features__title {
+  .title();
+  text-align: left;
+  margin-bottom: 14px;
+}
+
+.city-features__text {
+  .text();
+  text-align: left;
+  line-height: 21px;
+}

@@ -1,0 +1,41 @@
+@import "typography";
+@import "button";
+
+.photo-card {
+  text-align: left;
+}
+
+.photo-card__image {
+  margin-bottom: 10px;
+}
+
+.photo-card__title {
+  .title();
+  .title--small();
+  line-height: 24px;
+}
+
+.photo-card__author {
+  .text();
+  text-transform: none;
+  margin-bottom: 6px;
+}
+
+.photo-card__author-name {
+  font-style: normal;
+}
+
+.photo-card__likes {
+  display: flex;
+  align-items: baseline;
+  line-height: 14px;
+}
+
+.photo-card__like-button {
+  .button();
+  display: inline;
+  background-color: initial;
+  height: auto;
+  margin-right: 14px;
+  line-height: 0;
+}

@@ -1,0 +1,15 @@
+@import "mixins";
+@import "colors";
+
+.photos {
+  .list();
+}
+
+.photos__item {
+  padding: 22px 20px 21px;
+  border-top: 1px solid @alto-gray;
+
+  &:last-child {
+    border-bottom: 1px solid @alto-gray;
+  }
+}

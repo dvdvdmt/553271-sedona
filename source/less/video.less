@@ -1,0 +1,44 @@
+@import "button";
+@import "image";
+
+.video {
+  padding-bottom: 44px;
+}
+
+.video__controls {
+  position: relative;
+  margin: 0 20px;
+  margin-top: -45px;
+}
+
+.video__progress_slider {
+  height: 45px;
+  background-color: fade(black, 20%);
+}
+
+.video__buttons {
+  display: flex;
+  padding: 0 23px 0 25px;
+
+  height: 66px;
+  background-color: fade(black, 10%);
+}
+
+.video__restart {
+  .button();
+}
+
+.video__subtitles {
+  .button();
+  margin-left: auto;
+}
+
+.video__full-screen {
+  .button();
+  margin-left: 31px;
+}
+
+.video__image {
+  .image();
+}
+

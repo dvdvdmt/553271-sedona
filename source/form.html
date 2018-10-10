@@ -33,8 +33,8 @@
     </p>
   </section>
   <form class="feedback-form form" action="https://echo.htmlacademy.ru" method="post">
-    <fieldset class="form__section">
-      <legend class="title">Представьтесь:</legend>
+    <div class="form__section">
+      <h2 class="title">Представьтесь:</h2>
       <div class="form__group">
         <label class="form__label form__label--required" for="first-name">Имя</label>
         <input class="form__input"
@@ -65,9 +65,9 @@
                 autocomplete="additional-name"
         >
       </div>
-    </fieldset>
-    <fieldset class="form__section">
-      <legend class="title">Контактная информация:</legend>
+    </div>
+    <div class="form__section">
+      <h2 class="title">Контактная информация:</h2>
       <div class="form__group form__group--vertical">
         <label class="form__label form__label--required" for="phone">Контактный телефон</label>
         <input class="form__input form__input--phone" type="tel" id="phone" placeholder="Введите телефон">
@@ -76,9 +76,9 @@
         <label class="form__label form__label--required" for="email">Электронная почта</label>
         <input class="form__input form__input--email" type="email" id="email" placeholder="Введите e-mail">
       </div>
-    </fieldset>
-    <fieldset class="form__section">
-      <legend class="title">Ваше общее впечатление:</legend>
+    </div>
+    <div class="form__section">
+      <h2 class="title">Ваше общее впечатление:</h2>
       <div class="form__group">
         <label class="form__label">
           <input class="form__input" type="radio" name="impression" value="positive" checked>
@@ -97,9 +97,9 @@
           Затрудняюсь ответить
         </label>
       </div>
-    </fieldset>
-    <fieldset class="form__section">
-      <legend class="title">Посещенные достопримечательности:</legend>
+    </div>
+    <div class="form__section">
+      <h2 class="title">Посещенные достопримечательности:</h2>
       <div class="form__group form__group--vertical">
         <label class="form__label">
           <input class="form__input" type="checkbox" name="visited" value="devilBridge" checked>
@@ -118,11 +118,11 @@
           Красные скалы
         </label>
       </div>
-    </fieldset>
-    <fieldset class="form__section">
-      <legend class="title">Опишите свои эмоции:</legend>
+    </div>
+    <div class="form__section">
+      <h2 class="title">Опишите свои эмоции:</h2>
       <textarea class="form__group form__textarea" name="review" placeholder="Опишите свои восторги"></textarea>
-    </fieldset>
+    </div>
     <button class="form__submit">Отправить отзыв</button>
   </form>
 </main>

@@ -2,27 +2,32 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-<header class="page-header">
-  <a class="page-header__logo">
-    <img src="http://placehold.it/102x83" alt="Sedona City Logo" class="page-header__logo-image">
-  </a>
-  <nav class="main-nav">
-    <button class="main-nav__toggle">Открыть меню</button>
-    <ul class="main-nav__list">
-      <li><a href="index.html" class="main-nav__link">Главная</a></li>
-      <li><a class="main-nav__link main-nav__link--active">Фото и видео</a></li>
-      <li><a href="form.html" class="main-nav__link">Форма отзыва</a></li>
-      <li><a href="#" class="main-nav__link">HTML Academy</a></li>
+<body class="page">
+<header class="page__header nav">
+  <nav>
+    <button class="nav__btn nav__btn--close">X</button>
+    <ul class="nav__list">
+      <li><a href="/" class="nav__link">Главная</a></li>
+      <li><a href="photo.html" class="nav__link nav__link--active">Фото и видео</a></li>
+      <li><a href="form.html" class="nav__link">Форма отзыва</a></li>
+      <li><a href="#" class="nav__link">HTML Academy</a></li>
     </ul>
   </nav>
+  <div class="nav__bar">
+    <a class="nav__logo">
+      <img src="http://placehold.it/102x83" alt="Sedona City Logo" class="header__logo-image">
+    </a>
+    <button class="nav__btn nav__btn--open">=</button>
+  </div>
 </header>
-<main class="page-main">
+<main class="page__main">
   <section class="welcome welcome--small"></section>
-  <section class="page-section">
-    <h2 class="title">Фото и видео</h2>
+  <section class="page-section page-section--media">
+    <h2 class="page-section__title">Фото и видео</h2>
     <p class="text">
       Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
     </p>
@@ -30,73 +35,77 @@
   <section class="page-section">
     <ul class="photos">
       <li class="photos__item photo-card">
-        <img class="photo-card__image" src="http://placehold.it/280x280" alt="Неродные просторы">
-        <h2 class="photo-card__title title title--small">Неродные просторы</h2>
-        <p class="photo-card__author text text--small">Автор фото: <cite class="photo-card__author">Борис</cite></p>
-        <div class="photo-card__likes text text--small text--bold">
-          <button type="button">like</button>
-          <span>1350</span></div>
+        <img class="photo-card__image" src="./img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы">
+        <h2 class="photo-card__title">Неродные просторы</h2>
+        <p class="photo-card__author">Автор фото: <cite class="photo-card__author-name">Борис</cite></p>
+        <div class="photo-card__likes">
+          <button type="button" class="photo-card__like-button"><img src="./img/icon-like.svg" /></button>
+          <b>1350</b>
+        </div>
       </li>
       <li class="photos__item photo-card">
-        <img class="photo-card__image" src="http://placehold.it/280x280" alt="Местная растительность">
-        <h2 class="photo-card__title title title--small">Местная растительность</h2>
-        <p class="photo-card__author text text--small">Автор фото: <cite class="photo-card__author">Сергей</cite></p>
-        <div class="photo-card__likes text text--small text--bold">
-          <button type="button">like</button>
-          <span>143</span></div>
+        <img class="photo-card__image" src="./img/photo-cactus-mobile@1x.jpg" alt="Местная растительность">
+        <h2 class="photo-card__title">Местная растительность</h2>
+        <p class="photo-card__author">Автор фото: <cite class="photo-card__author-name">Сергей</cite></p>
+        <div class="photo-card__likes">
+          <button type="button" class="photo-card__like-button"><img src="./img/icon-like.svg" /></button>
+          <b>143</b>
+        </div>
       </li>
       <li class="photos__item photo-card">
-        <img class="photo-card__image" src="http://placehold.it/280x280" alt="Дорога на север">
-        <h2 class="photo-card__title title title--small">Дорога на север</h2>
-        <p class="photo-card__author text text--small">Автор фото: <cite class="photo-card__author">Петр</cite></p>
-        <div class="photo-card__likes text text--small text--bold">
-          <button type="button">like</button>
-          <span>96</span></div>
+        <img class="photo-card__image" src="./img/photo-roads-mobile@1x.jpg" alt="Дорога на север">
+        <h2 class="photo-card__title">Дорога на север</h2>
+        <p class="photo-card__author">Автор фото: <cite class="photo-card__author-name">Петр</cite></p>
+        <div class="photo-card__likes">
+          <button type="button" class="photo-card__like-button"><img src="./img/icon-like.svg" /></button>
+          <b>96</b>
+        </div>
       </li>
       <li class="photos__item photo-card">
-        <img class="photo-card__image" src="http://placehold.it/280x280" alt="Мост дьявола">
+        <img class="photo-card__image" src="./img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола">
         <h2 class="photo-card__title title title--small">Мост дьявола</h2>
-        <p class="photo-card__author text text--small">Автор фото: <cite class="photo-card__author">Антон</cite></p>
-        <div class="photo-card__likes text text--small text--bold">
-          <button type="button">like</button>
-          <span>254</span></div>
+        <p class="photo-card__author">Автор фото: <cite class="photo-card__author-name">Антон</cite></p>
+        <div class="photo-card__likes">
+          <button type="button" class="photo-card__like-button"><img src="./img/icon-like.svg" /></button>
+          <b>254</b>
+        </div>
       </li>
     </ul>
   </section>
-  <section class="page-section">
-    <h2 class="title">Все еще сомневаетесь?</h2>
+  <section class="page-section page-section--doubted">
+    <h2 class="page-section__title">Все еще сомневаетесь?</h2>
     <p class="text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
       раз!</p>
   </section>
   <section class="page-section video">
-    <img src="http://placeholdit/320x200" alt="Виды Седоны" class="video__image" />
+    <img src="./img/video-mobile@1x.jpg" alt="Виды Седоны" class="video__image" />
     <div class="video__controls">
       <div class="video__progress_slider"></div>
       <div class="video__buttons">
-        <button type="button" class="video__restart"></button>
-        <button type="button" class="video__subtitles"></button>
-        <button type="button" class="video__full-screen"></button>
+        <button type="button" class="video__restart"><img src="./img/icon-video-replay.svg" /></button>
+        <button type="button" class="video__subtitles"><img src="./img/icon-video-subtitles.svg" /></button>
+        <button type="button" class="video__full-screen"><img src="./img/icon-video-fullscreen.svg" /></button>
       </div>
     </div>
   </section>
 </main>
-<footer class="page-footer">
-  <div class="page-footer__social social">
-    <div class="social__hash-tag">#VISITSEDONA</div>
-    <ul class="social__list">
-      <li class="social__item">
-        <a href="https://twitter.com" class="social__link social__link--twitter">Мы в Twitter</a>
-      </li>
-      <li class="social__item">
-        <a href="https://facebook.com" class="social__link social__link--facebook">Мы в Facebook</a>
-      </li>
-      <li class="social__item">
-        <a href="https://youtube.com" class="social__link social__link--youtube">Мы в Youtube</a>
-      </li>
-    </ul>
-  </div>
-  <div class="page-footer__copyright copyright">
-    Разработано <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
+<footer class="footer">
+  <div class="footer__hash-tag">#VISITSEDONA</div>
+  <ul class="footer__social-list">
+    <li class="footer__social-item">
+      <a href="https://twitter.com" class="button button--social">Мы в Twitter</a>
+    </li>
+    <li class="footer__social-item">
+      <a href="https://facebook.com" class="button button--social">Мы в Facebook</a>
+    </li>
+    <li class="footer__social-item">
+      <a href="https://youtube.com" class="button button--social">Мы в Youtube</a>
+    </li>
+  </ul>
+  <div class="copyright">
+    Разработано <a href="https://htmlacademy.ru/intensive/adaptive"
+                    class="copyright__link"
+  ><img class="copyright__logo" src="./img/htmlacademy.svg" width="42" height="42" alt="HTML Academy logo" />HTML Academy</a>
   </div>
 </footer>
 </body>

@@ -1,0 +1,55 @@
+@import "less/colors";
+@import "less/resets";
+
+.button {
+  .button-reset();
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+
+  &--primary {
+    height: 58px;
+    font-size: 21px;
+    line-height: 26px;
+    background-color: @light-blue;
+
+    &:hover {
+      background-color: @fountain-blue;
+    }
+
+    &:active {
+      background-color: @steel-blue;
+      color: rgba(white, 0.3);
+    }
+
+    &[disabled] {
+      background-color: @mercury-gray;
+    }
+  }
+
+  &--social {
+    width: 46px;
+    height: 48px;
+    line-height: 0;
+    font-size: 0;
+    background-color: @light-blue;
+
+    &:hover {
+      background-color: @fountain-blue;
+    }
+
+    &:active {
+      background-color: @steel-blue;
+      color: rgba(white, 30%);
+    }
+
+    &[disabled] {
+      background-color: @mercury-gray;
+    }
+  }
+}

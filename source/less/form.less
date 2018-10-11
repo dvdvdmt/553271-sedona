@@ -41,8 +41,10 @@
     content: ":";
   }
 
-  &--required::after {
-    content: "*:";
+  &--required {
+    &::after {
+      content: "*:";
+    }
   }
 
   &--wrapper {
@@ -50,14 +52,14 @@
     align-items: center;
     padding-right: 0;
     margin-bottom: 16px;
-  }
 
-  &--wrapper::after {
-    content: none;
-  }
+    &::after {
+      content: none;
+    }
 
-  &--wrapper:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 

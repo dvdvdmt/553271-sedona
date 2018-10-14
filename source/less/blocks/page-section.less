@@ -9,7 +9,15 @@
   }
 
   &--city-intro {
-    padding: 40px 32px 24px 32px;
+    padding: 40px 32px 24px;
+
+    @media (min-width: @tablet-width) {
+      padding: 50px 70px 52px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 50px 288px 52px;
+    }
   }
 
   &--true-city {

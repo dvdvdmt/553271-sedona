@@ -1,0 +1,33 @@
+@import "../variables";
+
+.devil-bridge {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.devil-bridge__feature {
+  background-color: @light-blue;
+  color: white;
+  padding: 39px 0 38px;
+
+  @media (min-width: @tablet-width) {
+    padding: 45px 50px 0;
+    width: 256px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 53px 84px 0;
+    width: 400px;
+  }
+}
+
+.devil-bridge__photo {
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+    height: 256px;
+  }
+}

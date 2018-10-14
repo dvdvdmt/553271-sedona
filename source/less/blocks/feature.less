@@ -1,17 +1,32 @@
 @import "../typography";
 
+.feature {
+  line-height: 21px;
+}
+
 .feature__title {
   .title();
-  margin-bottom: 8px;
+
+  @media (min-width: @desktop-width) {
+    width: 75%;
+    margin: 0 auto;
+  }
 }
 
 .feature__number {
   .text();
-  line-height: 21px;
-  margin-bottom: 16px;
+  margin-top: 8px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 10px;
+  }
 }
 
 .feature__text {
   .text();
-  line-height: 21px;
+  margin-top: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 21px;
+  }
 }

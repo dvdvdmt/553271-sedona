@@ -1,7 +1,19 @@
+@import "../variables";
+
 .page {
-  margin: 0;
+  margin: 0 auto;
   font-family: "PT Sans", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   text-align: center;
+  width: @mobile-width;
+  background-color: @seashell-gray;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width - 2*40px;
+  }
 }

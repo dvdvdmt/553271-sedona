@@ -2,7 +2,22 @@
 @import "../typography";
 
 .city-features {
+  padding: 22px 38px 38px 18px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    display: flex;
+    height: 330px;
+  }
+}
+
+.city-features__list {
   .list-reset();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-grow: 1;
+  }
 }
 
 .city-features__item {
@@ -10,23 +25,68 @@
   padding-left: 52px;
   margin-bottom: 14px;
   background-repeat: no-repeat;
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    width: 250px;
+    margin: 0;
+    padding: 159px 0 0;
+    text-align: center;
+  }
 
   &--accommodation {
     background-image: url("../../img/icon-house.svg");
     background-size: 37px 36px;
     background-position: 4px 5px;
+
+    @media (min-width: @tablet-width) {
+      width: 166px;
+      margin-left: 46px;
+      background-position: center 60px;
+      background-size: 75px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 252px;
+      margin-left: 73px;
+    }
   }
 
   &--souvenir {
     background-image: url("../../img/icon-gift.svg");
     background-size: 32px 38px;
     background-position: 7px 3px;
+
+    @media (min-width: @tablet-width) {
+      order: 1;
+      width: 166px;
+      margin-left: 96px;
+      background-position: center 56px;
+      background-size: 64px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 194px;
+      margin-left: 162px;
+    }
   }
 
   &--food {
     background-image: url("../../img/icon-burger.svg");
     background-size: 40px 35px;
     background-position: 0 9px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 95px;
+      width: 154px;
+      background-position: center 62px;
+      background-size: 77px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 284px;
+      margin-left: 132px;
+    }
   }
 
   &:last-child {
@@ -36,12 +96,14 @@
 
 .city-features__title {
   .title();
-  text-align: left;
-  margin-bottom: 14px;
 }
 
 .city-features__text {
   .text();
-  text-align: left;
+  margin-top: 14px;
   line-height: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 21px;
+  }
 }

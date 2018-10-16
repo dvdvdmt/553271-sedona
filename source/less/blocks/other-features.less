@@ -2,13 +2,45 @@
 @import "../variables";
 
 .other-features {
+  background-color: @light-gray;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    height: 256px;
+    padding: 0;
+  }
+}
+
+.other-features__list {
   .list-reset();
+  padding: 28px 20px 28px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 45px 48px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 45px 57px 0;
+  }
 }
 
 .other-features__item {
   padding: 0 16px 28px;
   margin-bottom: 26px;
   border-bottom: 1px solid @alto-gray;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    width: 160px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 284px;
+  }
 
   &:last-child {
     margin-bottom: 0;

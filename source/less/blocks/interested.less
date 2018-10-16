@@ -1,15 +1,48 @@
 @import "../typography";
 
 .interested {
-  padding: 28px 20px 49px;
+  height: 259px;
+
+  @media (min-width: @tablet-width) {
+    height: 262px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 274px;
+  }
 }
 
 .interested__message {
-  padding-bottom: 34px;
+  margin: 27px auto 35px;
+  width: 266px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 56px;
+    margin-bottom: 42px;
+    width: 396px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 47px;
+  }
 }
 
 .interested__title {
   .title();
   .title--large();
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.interested__button {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 458px;
+  }
 }

@@ -1,0 +1,51 @@
+@import "../resets";
+@import "../typography";
+@import "../variables";
+
+.photo__list {
+  .list-reset();
+}
+
+.photo__card {
+  padding: 22px 20px 21px;
+  border-top: 1px solid @alto-gray;
+  text-align: left;
+
+  &:last-child {
+    border-bottom: 1px solid @alto-gray;
+  }
+}
+
+.photo__image {
+  margin-bottom: 8px;
+}
+
+.photo__title {
+  .title();
+  .title--small();
+  line-height: 24px;
+}
+
+.photo__author {
+  .text();
+  text-transform: none;
+  margin-bottom: 6px;
+}
+
+.photo__author-name {
+  font-style: normal;
+}
+
+.photo__likes {
+  display: flex;
+  align-items: baseline;
+  line-height: 14px;
+}
+
+.photo__like-button {
+  .button-reset();
+  display: inline;
+  height: auto;
+  margin-right: 14px;
+  line-height: 0;
+}

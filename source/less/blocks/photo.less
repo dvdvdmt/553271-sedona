@@ -4,6 +4,18 @@
 
 .photo__list {
   .list-reset();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 41px 60px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 43px;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 .photo__card {
@@ -14,22 +26,82 @@
   &:last-child {
     border-bottom: 1px solid @alto-gray;
   }
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    padding: 0;
+    flex-grow: 1;
+
+    &:first-child {
+      width: 100%;
+
+      & .photo__image {
+        height: 400px;
+      }
+    }
+
+    &:last-child {
+      width: 50%;
+      flex-grow: 0;
+      border: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:last-child {
+      width: auto;
+      flex-grow: 1;
+    }
+  }
 }
 
 .photo__image {
-  margin-bottom: 8px;
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    height: 267px;
+    width: 100%;
+  }
+}
+
+.photo__info {
+  padding-top: 14px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 20px;
+    background-color: @gallery-gray;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    margin-top: -80px;
+    color: white;
+    background-color: rgba(black, 0.3);
+  }
 }
 
 .photo__title {
   .title();
   .title--small();
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+  }
 }
 
 .photo__author {
   .text();
   text-transform: none;
   margin-bottom: 6px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .photo__author-name {
@@ -40,6 +112,10 @@
   display: flex;
   align-items: baseline;
   line-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+  }
 }
 
 .photo__like-button {

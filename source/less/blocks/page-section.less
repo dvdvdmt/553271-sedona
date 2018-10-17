@@ -22,6 +22,25 @@
 
   &--media {
     padding: 37px 24px 28px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 74px;
+
+      & .text {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 436px;
+      }
+
+      & .page-section__title {
+        font-size: 30px;
+        margin-bottom: 31px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 112px;
+    }
   }
 
   &--doubted {
@@ -35,5 +54,5 @@
 
 .page-section__title {
   .title();
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }

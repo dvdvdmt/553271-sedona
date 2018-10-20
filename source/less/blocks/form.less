@@ -2,15 +2,81 @@
 @import "../typography";
 
 .form {
-  margin-bottom: 22px;
+  margin-bottom: 4px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 57px 60px 61px;
+  }
 }
 
 .form__section {
   padding: 25px 20px;
   border-top: 1px solid @alto-gray;
 
-  &:last-child {
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
     border-top: none;
+    padding: 70px 0 0;
+  }
+
+  &--introduce {
+    @media (min-width: @tablet-width) {
+      padding-top: 0;
+      max-width: 50%;
+      padding-left: 56px;
+      text-align: left;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: @tablet-width) {
+      height: 308px; // FIXME set proper gaps between form-groups
+    }
+  }
+
+  &--impression {
+    @media (min-width: @tablet-width) {
+      order: -1;
+      max-width: 50%;
+      padding-top: 0;
+      padding-right: 50px;
+      text-align: left;
+      border-right: 1px solid @alto-gray;
+      height: 297px; // FIXME set proper gaps between form-groups
+    }
+  }
+
+  &--attractions {
+    @media (min-width: @tablet-width) {
+      height: 306px; // FIXME set proper gaps between form-groups
+    }
+  }
+
+  &--text-feedback {
+    @media (min-width: @tablet-width) {
+      width: 100%;
+      height: 301px; // FIXME set proper gaps between form-groups
+    }
+  }
+
+  &--submit {
+    border-top: none;
+
+    @media (min-width: @tablet-width) {
+      max-width: 50%;
+    }
+  }
+
+  &--legend {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
   }
 }
 
@@ -32,6 +98,29 @@
 .form__title {
   .title();
   margin-bottom: 22px;
+
+  &--outstanding {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::before,
+      &::after {
+        content: "";
+        height: 1px;
+        border: 1px solid;
+        vertical-align: middle;
+        margin-right: 60px;
+        flex-grow: 1;
+      }
+
+      &::after {
+        margin-left: 60px;
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 .form__label {

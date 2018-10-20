@@ -32,8 +32,8 @@
       Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
     </p>
   </section>
-  <form class="feedback-form form" action="https://echo.htmlacademy.ru" method="post">
-    <div class="form__section">
+  <form class="form" action="https://echo.htmlacademy.ru" method="post">
+    <div class="form__section form__section--introduce">
       <h2 class="form__title">Представьтесь:</h2>
       <div class="form__group">
         <label class="form__label form__label--required" for="first-name">Имя</label>
@@ -66,8 +66,8 @@
         >
       </div>
     </div>
-    <div class="form__section">
-      <h2 class="form__title">Контактная информация:</h2>
+    <div class="form__section form__section--contacts">
+      <h2 class="form__title form__title--outstanding">Контактная информация:</h2>
       <div class="form__group form__group--vertical">
         <label class="form__label form__label--required" for="phone">Контактный телефон</label>
         <input class="form__input form__input--phone" type="tel" id="phone" placeholder="Введите телефон">
@@ -77,7 +77,7 @@
         <input class="form__input form__input--email" type="email" id="email" placeholder="Введите e-mail">
       </div>
     </div>
-    <div class="form__section">
+    <div class="form__section form__section--impression">
       <h2 class="form__title">Ваше общее впечатление:</h2>
       <div class="form__group form__group--vertical">
         <label class="form__label form__label--wrapper">
@@ -94,8 +94,8 @@
         </label>
       </div>
     </div>
-    <div class="form__section">
-      <h2 class="form__title">Посещенные достопримечательности:</h2>
+    <div class="form__section form__section--attractions">
+      <h2 class="form__title form__title--outstanding">Посещенные<br>достопримечательности:</h2>
       <div class="form__group form__group--vertical">
         <label class="form__label form__label--wrapper">
           <input class="form__input" type="checkbox" name="visited" value="devilBridge" checked>
@@ -115,12 +115,15 @@
         </label>
       </div>
     </div>
-    <div class="form__section">
-      <h2 class="form__title">Опишите свои эмоции:</h2>
-      <textarea class="form__textarea" name="review" placeholder="Опишите свои восторги"></textarea>
+    <div class="form__section form__section--text-feedback">
+      <h2 class="form__title form__title--outstanding">Опишите свои эмоции:</h2>
+      <textarea class="form__textarea" name="review" placeholder="Опишите подробно все свои восторги"></textarea>
     </div>
-    <div class="form__section">
+    <div class="form__section form__section--submit">
       <button class="button button--primary">Отправить отзыв</button>
+    </div>
+    <div class="form__section form__section--legend">
+      * — обязательные поля
     </div>
   </form>
 </main>

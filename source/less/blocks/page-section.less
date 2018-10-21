@@ -77,6 +77,44 @@
       padding-top: 112px;
     }
   }
+
+  &--interested {
+    padding: 29px 22px 49px;
+
+    & .text {
+      margin-bottom: 35px;
+    }
+
+    @media (max-width: (@tablet-width - 1px)) {
+      & .page-section__title {
+        font-size: 21px;
+        margin-bottom: 19px;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      padding-top: 57px;
+      padding-bottom: 58px;
+
+      & .text {
+        margin-bottom: 42px;
+      }
+
+      & .button {
+        margin: 0 auto;
+        max-width: 458px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 57px;
+      padding-bottom: 66px;
+
+      & .text {
+        margin-bottom: 47px;
+      }
+    }
+  }
 }
 
 .page-section__title {

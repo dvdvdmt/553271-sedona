@@ -46,6 +46,17 @@
 
     @media (min-width: @desktop-width) {
       height: 209px; // FIXME set proper gaps between form-groups
+      & > .form__group {
+        justify-content: space-between;
+
+        & > .form__group {
+          width: 50%;
+
+          &:first-child {
+            padding-right: 80px;
+          }
+        }
+      }
     }
   }
 
@@ -144,6 +155,11 @@
     }
   }
 
+  &--radio-buttons {
+    flex-direction: column;
+    align-items: start;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -215,7 +231,9 @@
   border: none;
   padding: 22px 22px 22px;
 
-  &[type="input"] {
+  &[type="text"],
+  &[type="tel"],
+  &[type="email"] {
     flex-grow: 1;
   }
 

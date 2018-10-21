@@ -69,17 +69,19 @@
     <div class="form__section form__section--contacts">
       <h2 class="form__title form__title--outstanding">Контактная информация:</h2>
       <div class="form__group form__group--vertical">
-        <label class="form__label form__label--required" for="phone">Контактный телефон</label>
-        <input class="form__input form__input--phone" type="tel" id="phone" placeholder="Введите телефон">
-      </div>
-      <div class="form__group form__group--vertical">
-        <label class="form__label form__label--required" for="email">Электронная почта</label>
-        <input class="form__input form__input--email" type="email" id="email" placeholder="Введите e-mail">
+        <div class="form__group form__group--vertical">
+          <label class="form__label form__label--required" for="phone"><span class="desktop-hidden">Контактный</span> телефон</label>
+          <input class="form__input form__input--phone" type="tel" id="phone" placeholder="Введите телефон">
+        </div>
+        <div class="form__group form__group--vertical">
+          <label class="form__label form__label--required" for="email">Электронная почта</label>
+          <input class="form__input form__input--email" type="email" id="email" placeholder="Введите e-mail">
+        </div>
       </div>
     </div>
     <div class="form__section form__section--impression">
       <h2 class="form__title">Ваше общее впечатление:</h2>
-      <div class="form__group form__group--vertical">
+      <div class="form__group form__group--radio-buttons">
         <label class="form__label form__label--wrapper">
           <input class="form__input" type="radio" name="impression" value="positive" checked>
           Скорее положительное

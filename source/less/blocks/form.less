@@ -11,7 +11,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 42px 124px 66px;
+    padding: 42px 120px 66px;
   }
 }
 
@@ -114,8 +114,34 @@
   margin-bottom: 20px;
 
   &--vertical {
-    flex-direction: column;
-    align-items: start;
+    @media (max-width: (@desktop-width - 1px)) {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &--checkboxes {
+    @media (min-width: @tablet-width) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: 573px;
+      padding-left: 58px;
+
+      & > label {
+        width: 50%;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      max-width: initial;
+      padding-left: 0;
+
+      & > label {
+        width: auto;
+      }
+    }
   }
 
   &:last-child {
@@ -188,6 +214,10 @@
   background-color: @concrete-gray;
   border: none;
   padding: 22px 22px 22px;
+
+  &[type="input"] {
+    flex-grow: 1;
+  }
 
   &[type="radio"] {
     width: 56px;

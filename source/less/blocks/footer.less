@@ -2,20 +2,29 @@
 @import "../typography";
 
 .footer {
-  padding: 31px 0 18px;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 244px;
+  padding: 31px 0 26px;
+  background-color: white;
 
-.footer__hash-tag {
-  .title();
-  .title--large();
-  margin-bottom: 36px;
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    align-items: center;
+    height: 120px;
+    padding: 0 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 118px;
+  }
 }
 
 .footer__social-list {
   .list-reset();
   display: flex;
   justify-content: center;
-  margin-bottom: 36px;
 }
 
 .footer__social-item {

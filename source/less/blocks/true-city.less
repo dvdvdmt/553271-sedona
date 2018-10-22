@@ -1,0 +1,32 @@
+@import "../variables";
+
+.true-city {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.true-city__feature {
+  background-color: @light-blue;
+  color: white;
+  padding: 59px 28px 38px;
+
+  @media (min-width: @tablet-width) {
+    padding: 45px 44px 0;
+    width: 256px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 52px 66px 0;
+    width: 400px;
+  }
+}
+
+.true-city__photo {
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+    height: 256px;
+  }
+}

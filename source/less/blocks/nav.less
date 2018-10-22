@@ -1,8 +1,14 @@
-@import "../colors";
+@import "../variables";
 @import "../resets";
+
+@nav-bar-height: 56px;
 
 .nav {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    height: @nav-bar-height;
+  }
 }
 
 .nav__btn {
@@ -13,6 +19,10 @@
 
   width: 22px;
   height: 22px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 
   &--close {
     color: white;
@@ -25,6 +35,11 @@
 
 .nav__list {
   .list-reset();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    background-color: white;
+  }
 }
 
 .nav__link {
@@ -33,17 +48,71 @@
   align-items: center;
   text-decoration: none;
   font-size: 18px;
-  height: 56px;
+  height: @nav-bar-height;
   background-color: @light-blue;
   color: white;
   box-shadow:
     inset 0 -1px 0 0 rgba(1, 1, 1, 0.2),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+
+  @media (min-width: @tablet-width) {
+    color: black;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: transparent;
+  }
+}
+
+.nav__list-item {
+  @media (min-width: @tablet-width) {
+    &:nth-child(1) {
+      margin-left: 48px;
+    }
+
+    &:nth-child(2) {
+      margin-left: 78px;
+    }
+
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+
+    &:nth-child(4) {
+      margin-left: 50px;
+      margin-right: 26px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:nth-child(1) {
+      margin-left: 90px;
+    }
+
+    &:nth-child(2) {
+      margin-left: 162px;
+    }
+
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+
+    &:nth-child(4) {
+      margin-left: 138px;
+      margin-right: 70px;
+    }
+  }
 }
 
 .nav__bar {
   position: relative;
   display: flex;
   justify-content: center;
-  height: 56px;
+  height: @nav-bar-height;
+  background-color: white;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -@nav-bar-height;
+    height: 0;
+  }
 }

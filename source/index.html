@@ -11,15 +11,15 @@
   <nav>
     <button class="nav__btn nav__btn--close">X</button>
     <ul class="nav__list">
-      <li><a class="nav__link nav__link--active">Главная</a></li>
-      <li><a href="photo.html" class="nav__link">Фото и видео</a></li>
-      <li><a href="form.html" class="nav__link">Форма отзыва</a></li>
-      <li><a href="#" class="nav__link">HTML Academy</a></li>
+      <li class="nav__list-item"><a class="nav__link nav__link--active">Главная</a></li>
+      <li class="nav__list-item"><a href="photo.html" class="nav__link">Фото и видео</a></li>
+      <li class="nav__list-item"><a href="form.html" class="nav__link">Форма отзыва</a></li>
+      <li class="nav__list-item"><a href="#" class="nav__link">HTML Academy</a></li>
     </ul>
   </nav>
   <div class="nav__bar">
     <a class="nav__logo">
-      <img src="http://placehold.it/102x83" alt="Sedona City Logo" class="header__logo-image">
+      <img src="./img/logo-sedona-mobile.svg" alt="Sedona City Logo" class="nav__logo-image">
     </a>
     <button class="nav__btn nav__btn--open">=</button>
   </div>
@@ -30,14 +30,16 @@
     <h2 class="page-section__title">Седона — небольшой городок в аризоне, заслуживающий большего!</h2>
     <p class="text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
   </section>
-  <section class="page-section page-section--true-city feature">
-    <h2 class="feature__title">Настоящий городок</h2>
-    <p class="feature__number">— №1 —</p>
-    <p class="feature__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+  <section class="page-section true-city">
+    <div class="true-city__feature feature">
+      <h2 class="feature__title">Настоящий городок</h2>
+      <p class="feature__number">— №1 —</p>
+      <p class="feature__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+    </div>
+    <img class="true-city__photo image" width="320" height="260" src="http://placehold.it/320x260" alt="Вид Седоны" />
   </section>
-  <img class="image image--city-photo" width="320" height="260" src="http://placehold.it/320x260" alt="Вид Седоны" />
-  <section class="page-section page-section--city-features">
-    <ul class="city-features">
+  <section class="page-section city-features">
+    <ul class="city-features__list">
       <li class="city-features__item city-features__item--accommodation">
         <h2 class="city-features__title">Жилье</h2>
         <p class="city-features__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -52,19 +54,21 @@
       </li>
     </ul>
   </section>
-  <section class="page-section page-section--devil-bridge feature">
-    <h2 class="feature__title">Там есть мост дьявола</h2>
-    <p class="feature__number">— №2 —</p>
-    <p class="feature__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+  <section class="page-section devil-bridge">
+    <div class="devil-bridge__feature feature">
+      <h2 class="feature__title">Там есть мост дьявола</h2>
+      <p class="feature__number">— №2 —</p>
+      <p class="feature__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+    </div>
+    <img class="devil-bridge__photo image"
+          width="320"
+          height="260"
+          src="http://placehold.it/320x260"
+          alt="Фото Мост Дьявола"
+    />
   </section>
-  <img class="image image--city-photo"
-        width="320"
-        height="260"
-        src="http://placehold.it/320x260"
-        alt="Фото Мост Дьявола"
-  />
-  <section class="page-section page-section--other-features">
-    <ul class="other-features">
+  <section class="page-section other-features">
+    <ul class="other-features__list">
       <li class="other-features__item feature">
         <h2 class="feature__title">Небольшая площадь</h2>
         <p class="feature__number">— №3 —</p>
@@ -82,19 +86,17 @@
       </li>
     </ul>
   </section>
-  <section class="page-section interested">
-    <div class="interested__message">
-      <h2 class="interested__title">Заинтересовались?</h2>
-      <p class="text">
-        Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
-      </p>
-    </div>
+  <section class="page-section page-section--intro page-section--interested">
+    <h2 class="page-section__title">Заинтересовались?</h2>
+    <p class="text">
+      Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+    </p>
     <a href="#" class="button button--primary">Найти гостиницу</a>
   </section>
   <img class="image image--map" src="./img/bg-map-mobile@1x.jpg" width="320" height="350" />
 </main>
 <footer class="footer">
-  <div class="footer__hash-tag">#VISITSEDONA</div>
+  <div class="title title--large">#VISITSEDONA</div>
   <ul class="footer__social-list">
     <li class="footer__social-item">
       <a href="https://twitter.com" class="button button--social">Мы в Twitter</a>

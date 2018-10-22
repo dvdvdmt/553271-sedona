@@ -1,50 +1,123 @@
 @import "../typography";
-@import "../colors";
+@import "../variables";
 
 .page-section {
+  background-color: white;
+
   &--blue {
     background-color: @light-blue;
   }
 
   &--city-intro {
-    padding: 40px 32px 24px 32px;
+    padding: 40px 32px 24px;
+
+    @media (min-width: @tablet-width) {
+      padding: 50px 70px 52px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 50px 288px 52px;
+    }
   }
 
-  &--true-city {
-    background-color: @light-blue;
-    color: white;
-    padding: 59px 28px 38px 28px;
+  &--intro {
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-bottom: 28px;
+
+    & .text {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 436px;
+    }
+
+    @media (min-width: @tablet-width) {
+      & .page-section__title {
+        font-size: 30px;
+        margin-bottom: 31px;
+      }
+    }
   }
 
-  &--city-features {
-    padding: 22px 38px 38px 18px;
-  }
+  &--photo {
+    padding-top: 37px;
 
-  &--devil-bridge {
-    background-color: @light-blue;
-    color: white;
-    padding: 39px 25px 38px 23px;
-  }
+    @media (min-width: @tablet-width) {
+      padding-top: 74px;
+    }
 
-  &--other-features {
-    background-color: @light-gray;
-    padding: 26px 20px 28px;
-  }
-
-  &--media {
-    padding: 37px 24px 28px;
+    @media (min-width: @desktop-width) {
+      padding-top: 112px;
+    }
   }
 
   &--doubted {
-    padding: 33px 22px 35px;
+    padding-top: 33px;
+    padding-bottom: 35px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 66px;
+      padding-bottom: 73px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 70px;
+      padding-bottom: 71px;
+    }
   }
 
   &--leave-review {
     padding: 37px 22px 17px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 74px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 112px;
+    }
+  }
+
+  &--interested {
+    padding: 29px 22px 49px;
+
+    & .text {
+      margin-bottom: 35px;
+    }
+
+    @media (max-width: (@tablet-width - 1px)) {
+      & .page-section__title {
+        font-size: 21px;
+        margin-bottom: 19px;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      padding-top: 57px;
+      padding-bottom: 58px;
+
+      & .text {
+        margin-bottom: 42px;
+      }
+
+      & .button {
+        margin: 0 auto;
+        max-width: 458px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 57px;
+      padding-bottom: 66px;
+
+      & .text {
+        margin-bottom: 47px;
+      }
+    }
   }
 }
 
 .page-section__title {
   .title();
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }

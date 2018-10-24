@@ -13,6 +13,10 @@
   color: white;
   padding: 59px 28px 38px;
 
+  @media (max-width: (@tablet-width - 1px)) {
+    background: url("../img/bg-triangle.svg") 0 -16px no-repeat, @light-blue;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 45px 44px 0;
     width: 256px;

@@ -36,7 +36,11 @@
       <p class="feature__number">— №1 —</p>
       <p class="feature__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
     </div>
-    <img class="true-city__photo image" width="320" height="260" src="http://placehold.it/320x260" alt="Вид Седоны" />
+    <picture>
+      <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+      <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+      <img class="true-city__photo" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Вид Седоны">
+    </picture>
   </section>
   <section class="page-section city-features">
     <ul class="city-features__list">
@@ -60,12 +64,11 @@
       <p class="feature__number">— №2 —</p>
       <p class="feature__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
     </div>
-    <img class="devil-bridge__photo image"
-          width="320"
-          height="260"
-          src="http://placehold.it/320x260"
-          alt="Фото Мост Дьявола"
-    />
+    <picture>
+      <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+      <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+      <img class="devil-bridge__photo" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Фото Мост Дьявола">
+    </picture>
   </section>
   <section class="page-section other-features">
     <ul class="other-features__list">
@@ -93,7 +96,15 @@
     </p>
     <a href="#" class="button button--primary">Найти гостиницу</a>
   </section>
-  <img class="image image--map" src="./img/bg-map-mobile@1x.jpg" width="320" height="350" />
+  <section class="page-section">
+    <a target="_blank" href="https://goo.gl/maps/Xn8uRn8oLWT2">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+        <img class="content-image" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@1x.jpg 2x" alt="Map image">
+      </picture>
+    </a>
+  </section>
 </main>
 <footer class="footer">
   <div class="title title--large">#VISITSEDONA</div>

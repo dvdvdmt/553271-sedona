@@ -7,6 +7,10 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const browser = require('browser-sync').create();
 const del = require('del');
+const svgstore = require('gulp-svgstore');
+const rename = require('gulp-rename');
+const posthtml = require('gulp-posthtml');
+const posthtmlInclude = require('posthtml-include');
 
 function clean() {
   return del(['build/']);
@@ -41,8 +45,19 @@ function css() {
 
 function html() {
   return src('source/*.html')
-    // TODO add post-html task for includes
-    .pipe(dest('build/'))
+    .pipe(posthtml([
+      posthtmlInclude()
+    ]))
+    .pipe(dest('build/'));
+}
+
+function sprite() {
+  return src('source/img/icon-*.svg')
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('icons-sprite.svg'))
+    .pipe(dest('build/img'));
 }
 
 function server() {
@@ -55,11 +70,11 @@ function server() {
   });
 
   watch('source/less/**/*.less', series(css));
-  // TODO: add task for svg-sprite building and inclusion
-  // watch('source/img/icon-*.svg', series(sprite, html, refresh));
+  watch('source/img/icon-*.svg', series(sprite, html, refresh));
   watch('source/*.html', series(html, refresh));
 }
 
-const build = series(clean, copy, css, html);
+const build = series(clean, copy, css, sprite, html);
 exports.build = build;
 exports.start = series(build, server);
+exports.sprite = sprite;

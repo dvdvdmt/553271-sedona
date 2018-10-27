@@ -193,6 +193,18 @@
   &--radio-buttons {
     flex-direction: column;
     align-items: start;
+
+    & .form__group {
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: @tablet-width) {
+        margin-bottom: 25px;
+      }
+    }
   }
 }
 
@@ -241,11 +253,14 @@
     }
   }
 
-  &--wrapper {
+  &--bold {
     display: flex;
     align-items: center;
     padding-right: 0;
     margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: none;
 
     &::after {
       content: none;
@@ -286,6 +301,31 @@
 
   &::placeholder {
     color: black;
+  }
+}
+
+.form__radio-button {
+  position: absolute;
+  opacity: 0;
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+
+    &::before {
+      content: "";
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      margin-right: 20px;
+      background-color: @seashell-gray;
+    }
+  }
+
+  &:checked + label::before {
+    background-color: black;
+    border: 15px solid @seashell-gray;
   }
 }
 

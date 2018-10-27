@@ -98,18 +98,22 @@
     <div class="form__section form__section--impression">
       <h2 class="form__title">Ваше общее впечатление:</h2>
       <div class="form__group form__group--radio-buttons">
-        <label class="form__label form__label--wrapper">
-          <input class="form__input" type="radio" name="impression" value="positive" checked>
-          Скорее положительное
-        </label>
-        <label class="form__label form__label--wrapper">
-          <input class="form__input" type="radio" name="impression" value="negative">
-          Скорее негативное
-        </label>
-        <label class="form__label form__label--wrapper">
-          <input class="form__input" type="radio" name="impression" value="difficult">
-          Затрудняюсь ответить
-        </label>
+        <div class="form__group">
+          <input class="form__radio-button" type="radio" id="impression-positive" name="impression" value="positive" checked>
+          <label class="form__label form__label--bold" for="impression-positive">Скорее положительное</label>
+        </div>
+        <div class="form__group">
+          <input class="form__radio-button" type="radio" id="impression-negative" name="impression" value="negative">
+          <label class="form__label form__label--bold" for="impression-negative">
+            Скорее негативное
+          </label>
+        </div>
+        <div class="form__group">
+          <input class="form__radio-button" type="radio" id="impression-difficult" name="impression" value="difficult">
+          <label class="form__label form__label--bold" for="impression-difficult">
+            Затрудняюсь ответить
+          </label>
+        </div>
       </div>
     </div>
     <div class="form__section form__section--attractions">

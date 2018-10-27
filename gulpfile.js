@@ -28,7 +28,7 @@ function copy() {
 }
 
 function refresh(done) {
-  server.reload();
+  browser.reload();
   done();
 }
 

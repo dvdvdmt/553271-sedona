@@ -1,6 +1,6 @@
 'use strict';
 
-const { src, dest, watch, series } = require('gulp');
+const { src, dest, watch, series, parallel } = require('gulp');
 const less = require('gulp-less');
 const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
@@ -16,7 +16,7 @@ function clean() {
   return del(['build/']);
 }
 
-function copy() {
+function copySources() {
   return src([
     'source/fonts/**/*.{woff,woff2}',
     'source/img/**',
@@ -25,6 +25,13 @@ function copy() {
     base: 'source'
   })
     .pipe(dest('build/'));
+}
+
+function copyDependencies() {
+  return src([
+    'node_modules/picturefill/dist/picturefill.min.js',
+  ])
+    .pipe(dest('build/dependencies'));
 }
 
 function refresh(done) {
@@ -74,7 +81,7 @@ function server() {
   watch('source/*.html', series(html, refresh));
 }
 
-const build = series(clean, copy, css, sprite, html);
+const build = series(clean, parallel(copySources, copyDependencies), css, sprite, html);
 exports.build = build;
 exports.start = series(build, server);
 exports.sprite = sprite;

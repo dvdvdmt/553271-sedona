@@ -1,4 +1,5 @@
 @import "../variables";
+@import "../helpers";
 
 .welcome {
   height: 390px;
@@ -6,8 +7,8 @@
     url("../img/bg-intro-triangle-mobile.svg"),
     url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: bottom, center;
-  background-size: contain, auto;
+  background-position: bottom, bottom;
+  background-size: auto, 768px auto;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image:
@@ -32,6 +33,7 @@
     background-image:
       url("../img/bg-intro-triangle-desktop.svg"),
       url("../img/bg-back-desktop@1x.jpg");
+    background-size: auto, 1200px auto;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image:
@@ -53,5 +55,31 @@
       background-size: auto, 1200px auto;
       height: 300px;
     }
+
+    .welcome__text {
+      width: 228px;
+      padding-top: 50px;
+
+      @media (min-width: @tablet-width) {
+        width: 458px;
+        padding-top: 94px;
+      }
+
+      @media (min-width: @desktop-width) {
+        padding-top: 101px;
+      }
+    }
+  }
+}
+
+.welcome__text {
+  .content-image();
+  margin: 0 auto;
+  width: 280px;
+  padding-top: 90px;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+    padding-top: 77px;
   }
 }

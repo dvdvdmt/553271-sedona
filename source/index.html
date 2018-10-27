@@ -23,7 +23,11 @@
   </nav>
   <div class="nav__bar">
     <a class="nav__logo">
-      <img src="./img/logo-sedona-mobile.svg" alt="Sedona City Logo" class="nav__logo-image">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+        <img class="nav__logo-image" src="img/logo-sedona-mobile.svg" alt="Sedona City Logo">
+      </picture>
     </a>
     <button class="nav__btn nav__btn--open">=</button>
   </div>

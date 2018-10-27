@@ -27,6 +27,7 @@
 }
 
 .city-features__item {
+  position: relative;
   padding-top: 14px;
   padding-left: 52px;
   margin-bottom: 14px;
@@ -35,7 +36,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 159px 0 0;
+    padding: 62px 0 0;
     text-align: center;
     width: 162px;
   }
@@ -44,42 +45,32 @@
     width: 286px;
   }
 
-  &--accommodation {
-    background-image: url("../img/icon-house.svg");
-    background-size: 37px 36px;
-    background-position: 4px 5px;
-
-    @media (min-width: @tablet-width) {
-      background-position: center 60px;
-      background-size: 75px;
-    }
+  &:last-child {
+    margin-bottom: 0;
   }
 
   &--souvenir {
-    background-image: url("../img/icon-gift.svg");
-    background-size: 32px 38px;
-    background-position: 7px 3px;
-
     @media (min-width: @tablet-width) {
       order: 1;
-      background-position: center 56px;
-      background-size: 64px;
     }
   }
+}
 
-  &--food {
-    background-image: url("../img/icon-burger.svg");
-    background-size: 40px 35px;
-    background-position: 0 9px;
+.city-features__icon {
+  fill: @half-baked-blue;
 
-    @media (min-width: @tablet-width) {
-      background-position: center 62px;
-      background-size: 77px;
-    }
+  @media (max-width: @max-mobile-width) {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 38px;
+    height: 38px;
   }
 
-  &:last-child {
-    margin-bottom: 0;
+  @media (min-width: @tablet-width) {
+    width: 74px;
+    height: auto;
+    margin-bottom: 18px;
   }
 }
 

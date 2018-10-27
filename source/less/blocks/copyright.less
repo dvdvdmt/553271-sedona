@@ -1,3 +1,5 @@
+@import "../variables";
+
 .copyright {
   display: flex;
   justify-content: center;
@@ -8,10 +10,22 @@
 .copyright__link {
   font-size: 0;
   line-height: 0;
+
+  &:hover {
+    .copyright__logo {
+      fill: @half-baked-blue;
+    }
+  }
+
+  &:active {
+    .copyright__logo {
+      fill: @silver-chalice-gray;
+    }
+  }
 }
 
 .copyright__logo {
-  width: 42px;
-  height: 42px;
-  padding-left: 6px;
+  width: 27px;
+  height: 34px;
+  margin-left: 16px;
 }

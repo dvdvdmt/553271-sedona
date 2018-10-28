@@ -1,10 +1,13 @@
 @import "../variables";
+@import "../helpers";
 
 .true-city {
   display: block;
 
   @media (min-width: @tablet-width) {
     display: flex;
+    overflow: hidden;
+    height: 256px;
   }
 }
 
@@ -29,8 +32,13 @@
 }
 
 .true-city__photo {
+  .content-image();
+
   @media (min-width: @tablet-width) {
     flex-grow: 1;
-    height: 256px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -66px;
   }
 }

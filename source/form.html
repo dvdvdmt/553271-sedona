@@ -4,12 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="dependencies/picturefill.min.js"></script>
 </head>
 <body class="page">
+<div style="display:none;">
+  <include src="build/img/icons-sprite.svg"></include>
+</div>
 <header class="page__header nav">
   <nav>
-    <button class="nav__btn nav__btn--close">X</button>
+    <button class="nav__btn nav__btn--close"><svg width="23" height="22"><use xlink:href="#icon-cross"></use></svg></button>
     <ul class="nav__list">
       <li class="nav__list-item"><a href="/" class="nav__link">Главная</a></li>
       <li class="nav__list-item"><a href="photo.html" class="nav__link">Фото и видео</a></li>
@@ -19,13 +23,19 @@
   </nav>
   <div class="nav__bar">
     <a class="nav__logo" href="/">
-      <img src="./img/logo-sedona-mobile.svg" alt="Sedona City Logo" class="nav__logo-image">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+        <img class="nav__logo-image" src="img/logo-sedona-mobile.svg" alt="Sedona City Logo">
+      </picture>
     </a>
-    <button class="nav__btn nav__btn--open">=</button>
+    <button class="nav__btn nav__btn--open"><svg width="23" height="21"><use xlink:href="#icon-menu"></use></svg></button>
   </div>
 </header>
 <main class="page__main">
-  <section class="welcome welcome--small"></section>
+  <section class="welcome welcome--small">
+    <img class="welcome__text" src="img/text-sedona.svg" alt="Welcome!">
+  </section>
   <section class="page-section page-section--intro page-section--leave-review">
     <h2 class="page-section__title">Оставьте свой отзыв</h2>
     <p class="text">
@@ -70,51 +80,61 @@
       <h2 class="form__title form__title--outstanding">Контактная информация:</h2>
       <div class="form__group form__group--vertical">
         <div class="form__group form__group--vertical">
-          <label class="form__label form__label--required" for="phone"><span class="desktop-hidden">Контактный</span> телефон</label>
-          <input class="form__input form__input--phone" type="tel" id="phone" placeholder="Введите телефон">
+          <label class="form__label form__label--required" for="telephone"><span class="desktop-hidden">Контактный</span> телефон</label>
+          <div class="form__group">
+            <input class="form__input form__input--phone" type="tel" id="telephone" placeholder="Введите телефон">
+            <label class="form__input-icon" for="telephone"><svg width="18" height="18"><use xlink:href="#icon-phone"></use></svg></label>
+          </div>
         </div>
         <div class="form__group form__group--vertical">
           <label class="form__label form__label--required" for="email">Электронная почта</label>
-          <input class="form__input form__input--email" type="email" id="email" placeholder="Введите e-mail">
+          <div class="form__group">
+            <input class="form__input form__input--email" type="email" id="email" placeholder="Введите e-mail">
+            <label class="form__input-icon" for="email"><svg width="18" height="18"><use xlink:href="#icon-mail"></use></svg></label>
+          </div>
         </div>
       </div>
     </div>
     <div class="form__section form__section--impression">
       <h2 class="form__title">Ваше общее впечатление:</h2>
       <div class="form__group form__group--radio-buttons">
-        <label class="form__label form__label--wrapper">
-          <input class="form__input" type="radio" name="impression" value="positive" checked>
-          Скорее положительное
-        </label>
-        <label class="form__label form__label--wrapper">
-          <input class="form__input" type="radio" name="impression" value="negative">
-          Скорее негативное
-        </label>
-        <label class="form__label form__label--wrapper">
-          <input class="form__input" type="radio" name="impression" value="difficult">
-          Затрудняюсь ответить
-        </label>
+        <div class="form__group">
+          <input class="form__radio-button" type="radio" id="impression-positive" name="impression" value="positive" checked>
+          <label class="form__label form__label--bold" for="impression-positive">Скорее положительное</label>
+        </div>
+        <div class="form__group">
+          <input class="form__radio-button" type="radio" id="impression-negative" name="impression" value="negative">
+          <label class="form__label form__label--bold" for="impression-negative">
+            Скорее негативное
+          </label>
+        </div>
+        <div class="form__group">
+          <input class="form__radio-button" type="radio" id="impression-difficult" name="impression" value="difficult">
+          <label class="form__label form__label--bold" for="impression-difficult">
+            Затрудняюсь ответить
+          </label>
+        </div>
       </div>
     </div>
     <div class="form__section form__section--attractions">
       <h2 class="form__title form__title--outstanding">Посещенные<br>достопримечательности:</h2>
       <div class="form__group form__group--vertical form__group--checkboxes">
-        <label class="form__label form__label--wrapper">
-          <input class="form__input" type="checkbox" name="visited" value="devilBridge" checked>
-          Мост Дьявола
-        </label>
-        <label class="form__label form__label--wrapper">
-          <input class="form__input" type="checkbox" name="visited" value="bellMountain" checked>
-          Гора Колокол
-        </label>
-        <label class="form__label form__label--wrapper">
-          <input class="form__input" type="checkbox" name="visited" value="slidePark" checked>
-          Слайд-парк
-        </label>
-        <label class="form__label form__label--wrapper">
-          <input class="form__input" type="checkbox" name="visited" value="redRocks">
-          Красные скалы
-        </label>
+        <div class="form__group">
+          <input class="form__checkbox" type="checkbox" id="visited-devilBridge" name="visited" value="devilBridge" checked>
+          <label class="form__label form__label--bold" for="visited-devilBridge">Мост Дьявола</label>
+        </div>
+        <div class="form__group">
+          <input class="form__checkbox" type="checkbox" id="visited-bellMountain" name="visited" value="bellMountain" checked>
+          <label class="form__label form__label--bold" for="visited-bellMountain">Гора Колокол</label>
+        </div>
+        <div class="form__group">
+          <input class="form__checkbox" type="checkbox" id="visited-slidePark" name="visited" value="slidePark" checked>
+          <label class="form__label form__label--bold" for="visited-slidePark">Слайд-парк</label>
+        </div>
+        <div class="form__group">
+          <input class="form__checkbox" type="checkbox" id="visited-redRocks" name="visited" value="redRocks">
+          <label class="form__label form__label--bold" for="visited-redRocks">Красные скалы</label>
+        </div>
       </div>
     </div>
     <div class="form__section form__section--emotions">
@@ -133,19 +153,32 @@
   <div class="title title--large">#VISITSEDONA</div>
   <ul class="footer__social-list">
     <li class="footer__social-item">
-      <a href="https://twitter.com" class="button button--social">Мы в Twitter</a>
+      <a href="https://twitter.com" target="_blank" class="button button--social">
+        <svg width="18" height="15"><use xlink:href="#icon-twitter"></use></svg>
+        Мы в Twitter
+      </a>
     </li>
     <li class="footer__social-item">
-      <a href="https://facebook.com" class="button button--social">Мы в Facebook</a>
+      <a href="https://facebook.com" target="_blank" class="button button--social">
+        <svg width="9" height="18"><use xlink:href="#icon-facebook"></use></svg>
+        Мы в Facebook
+      </a>
     </li>
     <li class="footer__social-item">
-      <a href="https://youtube.com" class="button button--social">Мы в Youtube</a>
+      <a href="https://youtube.com" target="_blank" class="button button--social">
+        <svg width="20" height="14"><use xlink:href="#icon-youtube"></use></svg>
+        Мы в Youtube
+      </a>
     </li>
   </ul>
   <div class="copyright">
-    Разработано <a href="https://htmlacademy.ru/intensive/adaptive"
-                    class="copyright__link"
-  ><img class="copyright__logo" src="./img/htmlacademy.svg" width="42" height="42" alt="HTML Academy logo" />HTML Academy</a>
+    Разработано
+    <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
+      <svg class="copyright__logo" width="27" height="34">
+        <include src="source/img/logo-htmlacademy.svg" />
+      </svg>
+      HTML Academy
+    </a>
   </div>
 </footer>
 </body>

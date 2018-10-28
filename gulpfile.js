@@ -11,6 +11,7 @@ const svgstore = require('gulp-svgstore');
 const rename = require('gulp-rename');
 const posthtml = require('gulp-posthtml');
 const posthtmlInclude = require('posthtml-include');
+const imagemin = require('gulp-imagemin');
 
 function clean() {
   return del(['build/']);
@@ -81,7 +82,21 @@ function server() {
   watch('source/*.html', series(html, refresh));
 }
 
+function optimizeImages() {
+  return src('source/img/*.{jpg,svg}')
+    .pipe(imagemin([
+      imagemin.jpegtran({ progressive: true }),
+      imagemin.svgo({
+        plugins: [
+          { removeViewBox: false }
+        ]
+      })
+    ]))
+    .pipe(dest('source/img'));
+}
+
 const build = series(clean, parallel(copySources, copyDependencies), css, sprite, html);
 exports.build = build;
 exports.start = series(build, server);
 exports.sprite = sprite;
+exports.optimizeImages = optimizeImages;

@@ -6,6 +6,22 @@
 .nav {
   position: relative;
 
+  @media (max-width: @max-mobile-width) {
+    &--open {
+      .nav__btn--open {
+        display: none;
+      }
+
+      .nav__btn--close {
+        display: block;
+      }
+
+      .nav__list {
+        display: block;
+      }
+    }
+  }
+
   @media (min-width: @tablet-width) {
     height: @nav-bar-height;
   }
@@ -14,11 +30,11 @@
 .nav__btn {
   .button-reset();
   position: absolute;
-  right: 20px;
-  top: 17px;
+  right: 0;
+  top: 1px;
 
-  width: 22px;
-  height: 22px;
+  width: @nav-bar-height;
+  height: @nav-bar-height;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -35,6 +51,7 @@
 
 .nav__list {
   .list-reset();
+  display: none;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -55,13 +72,15 @@
     inset 0 -1px 0 0 rgba(1, 1, 1, 0.2),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
 
-  &:hover {
-    background-color: @fountain-blue;
-  }
+  @media (max-width: @max-mobile-width) {
+    &:hover {
+      background-color: @fountain-blue;
+    }
 
-  &:active {
-    background-color: @steel-blue;
-    color: rgba(white, 0.5);
+    &:active {
+      background-color: @steel-blue;
+      color: rgba(white, 0.5);
+    }
   }
 
   @media (min-width: @tablet-width) {

@@ -6,6 +6,22 @@
 .nav {
   position: relative;
 
+  @media (max-width: @max-mobile-width) {
+    &--open {
+      .nav__btn--open {
+        display: none;
+      }
+
+      .nav__btn--close {
+        display: block;
+      }
+
+      .nav__list {
+        display: block;
+      }
+    }
+  }
+
   @media (min-width: @tablet-width) {
     height: @nav-bar-height;
   }
@@ -14,11 +30,11 @@
 .nav__btn {
   .button-reset();
   position: absolute;
-  right: 20px;
-  top: 17px;
+  right: 0;
+  top: 1px;
 
-  width: 22px;
-  height: 22px;
+  width: @nav-bar-height;
+  height: @nav-bar-height;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -35,6 +51,7 @@
 
 .nav__list {
   .list-reset();
+  display: none;
 
   @media (min-width: @tablet-width) {
     display: flex;

@@ -164,6 +164,10 @@
     @media (min-width: @desktop-width) {
       margin-bottom: 0;
     }
+
+    & > .form__group {
+      flex-grow: 1;
+    }
   }
 
   &--checkboxes {
@@ -199,6 +203,7 @@
 
       & > .form__group {
         width: auto;
+        flex-grow: initial;
       }
     }
   }
@@ -288,23 +293,16 @@
   background-color: @concrete-gray;
   border: none;
   padding: 22px 22px 22px;
+  flex-grow: 1;
 
-  &[type="text"],
-  &[type="tel"],
-  &[type="email"] {
-    flex-grow: 1;
+  &:hover {
+    background-color: @mercury-gray;
   }
 
-  &[type="radio"] {
-    width: 56px;
-    height: 56px;
-    margin: 0 22px 0 0;
-  }
-
-  &[type="checkbox"] {
-    width: 56px;
-    height: 56px;
-    margin: 0 22px 0 0;
+  &:focus {
+    background-color: white;
+    outline: 4px solid @mercury-gray;
+    outline-offset: -4px;
   }
 
   &::placeholder {
@@ -331,9 +329,22 @@
     }
   }
 
+  &:hover + label::before {
+    background-color: @mercury-gray;
+  }
+
+  &:active + label::before {
+    background-color: @alto-gray;
+  }
+
   &:checked + label::before {
     background-color: black;
     border: 15px solid @seashell-gray;
+  }
+
+  &:active:checked + label::before {
+    background-color: rgba(black, 0.5);
+    border: 15px solid @alto-gray;
   }
 }
 
@@ -351,6 +362,7 @@
       width: 54px;
       height: 54px;
       margin-right: 20px;
+      border-radius: 5px;
       background-color: @seashell-gray;
     }
 

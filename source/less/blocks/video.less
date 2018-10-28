@@ -61,18 +61,21 @@
   }
 }
 
-.video__restart {
+.video__btn {
   .button-reset();
-}
+  fill: @shuttle-gray;
 
-.video__subtitles {
-  .button-reset();
-  margin-left: auto;
-}
+  @media (min-width: @tablet-width) {
+    fill: white;
+  }
 
-.video__full-screen {
-  .button-reset();
-  margin-left: 31px;
+  &--subtitles {
+    margin-left: auto;
+  }
+
+  &--full-screen {
+    margin-left: 31px;
+  }
 }
 
 .video__image {

@@ -346,6 +346,10 @@
     background-color: rgba(black, 0.5);
     border: 15px solid @alto-gray;
   }
+
+  &:focus + label::before {
+    box-shadow: 0 0 3px black;
+  }
 }
 
 .form__checkbox {
@@ -392,6 +396,10 @@
 
   &:checked:active + label::after {
     opacity: 0.5;
+  }
+
+  &:focus + label::before {
+    box-shadow: 0 0 3px black;
   }
 }
 

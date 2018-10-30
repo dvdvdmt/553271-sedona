@@ -66,8 +66,24 @@
   .button-reset();
   fill: @shuttle-gray;
 
+  &:hover {
+    fill: @mine-shaft-gray;
+  }
+
+  &:active {
+    fill: rgba(@mine-shaft-gray, 0.3);
+  }
+
   @media (min-width: @tablet-width) {
     fill: white;
+
+    &:hover {
+      fill: rgba(white, 0.6);
+    }
+
+    &:active {
+      fill: rgba(white, 0.3);
+    }
   }
 
   &--subtitles {

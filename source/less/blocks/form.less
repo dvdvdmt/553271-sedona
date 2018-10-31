@@ -2,7 +2,7 @@
 @import "../typography";
 
 .form {
-  padding-bottom: 4px;
+  padding-bottom: 27px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -16,7 +16,7 @@
 }
 
 .form__section {
-  padding: 25px 20px;
+  padding: 19px 20px 22px;
   border-top: 1px solid @alto-gray;
 
   @media (min-width: @tablet-width) {
@@ -47,7 +47,7 @@
       }
     }
 
-    @media (min-width: @tablet-width) and (max-width: (@desktop-width - 1px)) {
+    @media (max-width: (@desktop-width - 1px)) {
       .form__label {
         text-align: left;
         padding-left: 21px;
@@ -243,6 +243,7 @@
       &::before,
       &::after {
         content: "";
+        display: block;
         height: 1px;
         background-color: @alto-gray;
         vertical-align: middle;
@@ -321,6 +322,7 @@
 
     &::before {
       content: "";
+      display: block;
       width: 54px;
       height: 54px;
       border-radius: 50%;
@@ -346,6 +348,10 @@
     background-color: rgba(black, 0.5);
     border: 15px solid @alto-gray;
   }
+
+  &:focus + label::before {
+    box-shadow: 0 0 3px black;
+  }
 }
 
 .form__checkbox {
@@ -359,15 +365,17 @@
 
     &::before {
       content: "";
+      display: block;
       width: 54px;
       height: 54px;
-      margin-right: 20px;
+      margin-right: 25px;
       border-radius: 5px;
       background-color: @seashell-gray;
     }
 
     &::after {
       content: "";
+      display: block;
       position: absolute;
       top: 0;
       left: 0;
@@ -392,6 +400,10 @@
 
   &:checked:active + label::after {
     opacity: 0.5;
+  }
+
+  &:focus + label::before {
+    box-shadow: 0 0 3px black;
   }
 }
 

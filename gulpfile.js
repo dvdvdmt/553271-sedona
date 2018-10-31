@@ -12,6 +12,9 @@ const rename = require('gulp-rename');
 const posthtml = require('gulp-posthtml');
 const posthtmlInclude = require('posthtml-include');
 const imagemin = require('gulp-imagemin');
+const htmlmin = require('gulp-htmlmin');
+const csso = require('gulp-csso');
+const uglify = require('gulp-uglify');
 
 function clean() {
   return del(['build/']);
@@ -21,7 +24,6 @@ function copySources() {
   return src([
     'source/fonts/**/*.{woff,woff2}',
     'source/img/**',
-    'source/js/**',
   ], {
     base: 'source'
   })
@@ -47,6 +49,7 @@ function css() {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(csso({ comments: false }))
     .pipe(dest('build/css'))
     .pipe(browser.stream());
 }
@@ -56,6 +59,15 @@ function html() {
     .pipe(posthtml([
       posthtmlInclude()
     ]))
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest('build/'));
+}
+
+function js() {
+  return src('source/js/*.js', {
+    base: 'source'
+  })
+    .pipe(uglify())
     .pipe(dest('build/'));
 }
 
@@ -80,6 +92,7 @@ function server() {
   watch('source/less/**/*.less', series(css));
   watch('source/img/icon-*.svg', series(sprite, html, refresh));
   watch('source/*.html', series(html, refresh));
+  watch('source/js/*.js', series(js, refresh));
 }
 
 function optimizeImages() {
@@ -95,7 +108,7 @@ function optimizeImages() {
     .pipe(dest('source/img'));
 }
 
-const build = series(clean, parallel(copySources, copyDependencies), css, sprite, html);
+const build = series(clean, parallel(copySources, copyDependencies), js, css, sprite, html);
 exports.build = build;
 exports.start = series(build, server);
 exports.sprite = sprite;
